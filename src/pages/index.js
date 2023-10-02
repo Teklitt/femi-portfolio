@@ -18,7 +18,7 @@ export default function Home() {
         <meta name="description" content="Created By Femi" />
       </Head>
 
-      <main className=" flex items-center text-dark w-full min-h-screen">
+      <main className=" flex items-center text-dark w-full min-h-screen dark:text-light">
         <Layout className="pt-0">
           <div className="flex items-center justify-between w-full">
             <div className="w-1/2">
@@ -48,7 +48,7 @@ export default function Home() {
                 <Link
                   href="/dummy.pdf"
                   target={'_blank'}
-                  className="flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark"
+                  className="flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light"
                   download={true}
                 >
                   Resume <LinkArrow className="w-6 ml-2" />
@@ -56,7 +56,7 @@ export default function Home() {
                 <Link
                   href="mailto:mebudenifemi@gmail.com"
                   target={'_blank'}
-                  className="ml-4 flex items-center text-lg font-medium  underline"
+                  className="ml-4 flex items-center text-lg font-medium  underline dark:text-light"
                 >
                   Contact
                 </Link>

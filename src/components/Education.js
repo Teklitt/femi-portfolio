@@ -27,11 +27,11 @@ const Details = ({
       >
         <h3 className="capitalize font-bold text-2xl">{schoolName}</h3>
 
-        <h2 className="capitalize font-medium text-dark/75">
+        <h2 className="capitalize font-medium text-dark/75 dark:text-light/75">
           {degree} | {major}
         </h2>
 
-        <span className="capitalize font-medium text-dark/75">
+        <span className="capitalize font-medium text-dark/75 dark:text-light/75">
           {period} | {location}
         </span>
 
@@ -55,7 +55,7 @@ const Education = () => {
       <div ref={ref} className="w-[75%] mx-auto relative">
         <motion.div
           style={{ scaleY: scrollYProgress }}
-          className="absolute left-9 top-0 w-[4px] h-full bg-dark origin-top"
+          className="absolute left-9 top-0 w-[4px] h-full bg-dark origin-top dark:bg-light"
         />
         <ul className="w-full flex flex-col items-start justify-between ml-4">
           <Details
