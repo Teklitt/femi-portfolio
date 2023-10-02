@@ -1,6 +1,5 @@
-# Create a Stunning Portfolio Website with Nextjs, Tailwind CSS and Framer-motion🌟
+# Portfolio Website with Nextjs, Tailwind CSS and Framer-motion🌟
 
-### Images of The Portfolio Website:
 
 ### Resources Used in This Project
 
