@@ -25,6 +25,8 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
           className="w-full h-auto"
           whileHover={{ scale: 1.05 }}
           transitions={{ duration: 0.2 }}
+          priority
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
         />
       </Link>
       <div className="w-1/2 flex flex-col items-start justify-between pl-6">
@@ -66,7 +68,7 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
 const Project = ({ type, title, img, link, github }) => {
   return (
     <article className="w-full flex flex-col items-center justift-center rounded-3xl border-4 border-solid border-dark dark:border-light bg-light p-6 relative dark:bg-dark">
-      <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-3xl bg-dark rounded-l-2xl rounded-br-3xl rounded-tr-3xl" />
+      <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-3xl bg-dark rounded-l-2xl rounded-br-3xl rounded-tr-3xl dark:bg-light" />
       <Link
         href={link}
         target="_blank"

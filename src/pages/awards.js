@@ -15,7 +15,17 @@ const awards = () => {
       </Head>
       <main className="w-full mb-16 flex flex-col items-center justify-center">
         <Layout className="pt-16">
-          <AnimatedText text="Awards and Certifications" />
+          <AnimatedText className="mt-[20%]" text="Awards and Certifications" />
+
+          <div className="stars" aria-hidden="true"></div>
+          <div className="starts2" aria-hidden="true"></div>
+          <div className="stars3" aria-hidden="true"></div>
+
+          <section className="flex flex-col justify-center items-center">
+            <h2 className="p-12 text-center mb-[50%] text-8xl text-dark dark:text-light">
+              Page Under Construction
+            </h2>
+          </section>
         </Layout>
       </main>
     </>

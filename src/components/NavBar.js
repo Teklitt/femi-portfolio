@@ -34,62 +34,85 @@ const NavBar = () => {
   }
   return (
     <header className="w-full px-32 py-8 font-medium flex items-center justify-between dark:text-light ">
-      <nav>
-        <CustomLink href="/" title="Home" className="mr-4" />
-        <CustomLink href="/about" title="About" className="mx-4" />
-        <CustomLink href="/projects" title="Projects" className="mx-4" />
-        <CustomLink href="/articles" title="Articles" className="mx-4" />
-        <CustomLink
-          href="/awards"
-          title="Awards & Certifications"
-          className="ml-4"
-        />
-      </nav>
+      <button
+        className=" flex-col justify-center items-center hidden lg:flex mb-2"
+        onClick={handleClick}
+      >
+        <span
+          className={`bg-dark dark:bg-light block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm -translate-y-0.5 ${
+            isOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5'
+          }`}
+        ></span>
+        <span
+          className={`bg-dark dark:bg-light block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${
+            isOpen ? 'opacity-0' : 'opacity-100'
+          }`}
+        ></span>
+        <span
+          className={`bg-dark dark:bg-light block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${
+            isOpen ? '-rotate-45 -translate-y-1' : 'translate-y-0.5'
+          }`}
+        ></span>
+      </button>
 
-      <nav className="flex items-center justify-center flex-wrap ">
-        <motion.a
-          href="www.linkedin.com/in/femi-mebude-639118190"
-          target={'_blank'}
-          whileHover={{ y: -2 }}
-          whileTap={{ scale: 0.9 }}
-          className="w-6 mr-3"
-        >
-          <LinkedInIcon />
-        </motion.a>
+      <div className="w-full flex justify-between items-center lg:hidden">
+        <nav>
+          <CustomLink href="/" title="Home" className="mr-4" />
+          <CustomLink href="/about" title="About" className="mx-4" />
+          <CustomLink href="/projects" title="Projects" className="mx-4" />
+          <CustomLink href="/articles" title="Articles" className="mx-4" />
+          <CustomLink
+            href="/awards"
+            title="Awards & Certifications"
+            className="ml-4 1xl:hidden "
+          />
+        </nav>
 
-        <motion.a
-          href="https://github.com/teklitt"
-          target={'_blank'}
-          whileHover={{ y: -2 }}
-          whileTap={{ scale: 0.9 }}
-          className="w-6 ml-3"
-        >
-          <GithubIcon />
-        </motion.a>
+        <nav className="flex items-center justify-center flex-wrap ">
+          <motion.a
+            href="www.linkedin.com/in/femi-mebude-639118190"
+            target={'_blank'}
+            whileHover={{ y: -2 }}
+            whileTap={{ scale: 0.9 }}
+            className="w-7"
+          >
+            <LinkedInIcon />
+          </motion.a>
 
-        <motion.a
-          href="https://stackoverflow.com/users/22582678/teklitt"
-          target={'_blank'}
-          whileHover={{ y: -2 }}
-          whileTap={{ scale: 0.9 }}
-          className="w-6 ml-3"
-        >
-          <StackIcon />
-        </motion.a>
+          <motion.a
+            href="https://github.com/teklitt"
+            target={'_blank'}
+            whileHover={{ y: -2 }}
+            whileTap={{ scale: 0.9 }}
+            className="w-8 ml-5"
+          >
+            <GithubIcon />
+          </motion.a>
 
-        <button
-          onClick={() => setMode(mode === 'light' ? 'dark' : 'light')}
-          className={`ml-3 flex items-center justify-center rounded-full p-1
+          <motion.a
+            href="https://stackoverflow.com/users/22582678/teklitt"
+            target={'_blank'}
+            whileHover={{ y: -2 }}
+            whileTap={{ scale: 0.9 }}
+            className="w-7 ml-5"
+          >
+            <StackIcon />
+          </motion.a>
+
+          <button
+            onClick={() => setMode(mode === 'light' ? 'dark' : 'light')}
+            className={`ml-5 flex items-center justify-center rounded-full p-1
           ${mode === 'light' ? 'bg-dark text-light' : 'bg-light text-dark'}
           `}
-        >
-          {mode === 'dark' ? (
-            <SunIcon className={'fill-dark'} />
-          ) : (
-            <MoonIcon className={'fill-dark'} />
-          )}
-        </button>
-      </nav>
+          >
+            {mode === 'dark' ? (
+              <SunIcon className={'fill-dark'} />
+            ) : (
+              <MoonIcon className={'fill-dark'} />
+            )}
+          </button>
+        </nav>
+      </div>
 
       <div className="absolute left-[50%] top-2 translate-x-[-50%] ">
         <Logo />
