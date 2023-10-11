@@ -54,15 +54,15 @@ export default function Home() {
                 <Link
                   href="/dummy.pdf"
                   target={'_blank'}
-                  className="flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light md:p-2 md:px-4 md:text-base"
+                  className="flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg sm:text-sm font-semibold hover:bg-light hover:text-dark border-2 sm:p-1 border-solid border-transparent hover:border-dark dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light md:p-2 md:px-4 md:text-base"
                   download={true}
                 >
-                  Resume <LinkArrow className="w-6 ml-2" />
+                  Resume <LinkArrow className="w-6 ml-2 sm:w-5 xs:w-3" />
                 </Link>
                 <Link
                   href="mailto:mebudenifemi@gmail.com"
                   target={'_blank'}
-                  className="ml-4 flex items-center text-lg font-medium  underline dark:text-light md:text-base"
+                  className="ml-4 flex items-center text-lg font-medium  underline dark:text-light md:text-base sm:text-sm"
                 >
                   Contact
                 </Link>
