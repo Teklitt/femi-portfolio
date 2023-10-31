@@ -64,7 +64,7 @@ const Experience = () => {
           <Details
             position="Technical Expert"
             company=" Apple"
-            companyLink="wwww.apple.com"
+            companyLink="https://apple.com"
             period="2021 - Present"
             location=" Towson, MD"
             jobDetails="Conducted daily debugging and troubleshooting of roughly 15 devices, executing diagnostics, repairs, and functional tests to guarantee optimal operation. Tested devices to ensure functioning capacity and provided maintenance details to customers. 
@@ -75,7 +75,7 @@ Successfully trained a weekly average of 25 customers in navigating legacy and n
           <Details
             position="Full Stack Software Engineer intern"
             company=" Pluralsight"
-            companyLink="wwww.pluralsight.com"
+            companyLink="https://pluralsight.com"
             period="2023 - 2023"
             location="Salt Lake City, UT"
             jobDetails="Engineered and maintained codebase for client-facing websites, utilizing React, Typescript,  and Node.js to optimize the efficiency of the codebase by 5%. 
@@ -85,13 +85,29 @@ Developed and deployed a user-centric focus support tools page, replacing conven
           />
 
           <Details
-            position="Technical Expert"
-            company=" Apple"
-            companyLink="wwww.apple.com"
-            period="2021 - Present"
-            location=" Towson, MD"
-            jobDetails="Conducted daily debugging and troubleshooting of roughly 15 devices, executing diagnostics, repairs, and functional tests to guarantee optimal operation. Tested devices to ensure functioning capacity and provided maintenance details to customers. 
-Successfully trained a weekly average of 25 customers in navigating legacy and newly acquired devices effectively, ensuring their satisfaction with setup services. Demonstrating strong communication and relationship-building skills.
+            position="CEO"
+            company=" Teklitt Solutions"
+            companyLink="https://teklittsolutions.com"
+            period="2017 - Present"
+            location=" Baltimore, MD"
+            jobDetails="● Orchestrated the repair of over 1000 devices, encompassing cracked screens of iPads, iPhones, and laptops, achieving a 95% customer
+retention rate. ● Managed a team of 2 employees, fostering a collaborative environment and streamlining repair operations to achieve a 20% increase in repair
+efficiency. ● Cultivated a strong reputation for customer satisfaction, consistently exceeding expectations and maintaining a 98% customer approval
+rating.Leveraged data analytics to continually enhance customer experiences."
+          />
+
+          <Details
+            position="Lead Technician/Manager"
+            company=" Phone Spot"
+            companyLink="https://phone-spot-cellphone-accessories-and.business.site/"
+            period="2017 - Present"
+            location=" Baltimore, MD"
+            jobDetails="● Coached and developed a team of 15 technicians in mobile phone repair and troubleshooting techniques, resulting in a 20% increase in overall
+repair efficiency. My skills in data analysis played a crucial role in achieving these results.
+● Managed and optimized the operations of 2 stores, consistently meeting and exceeding revenue targets by 15% through strategic resource
+allocation and customer engagement.
+● Demonstrated expertise in diagnosing, troubleshooting, and repairing a wide range of devices including laptops, iPhones, and iPads, contributing to
+a 25% reduction in repair turnaround time.
 "
           />
         </ul>

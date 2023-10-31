@@ -9,6 +9,7 @@ import { useEffect, useRef } from 'react'
 import Skills from '@/components/Skills'
 import Experience from '@/components/Experience'
 import Education from '@/components/Education'
+import TransitionEffect from '@/components/TransitionEffect'
 
 const AnimatedNumbers = ({ value }) => {
   const ref = useRef(null)
@@ -44,6 +45,8 @@ const about = () => {
           content="Computer science student graduation date of Decemebr 2024, interested in software engineering internships and Devops Engineering "
         />
       </Head>
+
+      <TransitionEffect />
       <main className="flex w-full flex-col items-center justify-center dark:text-light">
         <Layout className="pt-16 px-32">
           {/* Heading animated text */}

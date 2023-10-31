@@ -4,14 +4,14 @@ import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
-import article1 from '../../public/images/articles/pagination component in reactjs.jpg'
-import article2 from '../../public/images/articles/todo list app built using react redux and framer motion.png'
 import { motion, useMotionValue } from 'framer-motion'
-import article3 from '../../public/images/articles/What is Redux with easy explanation.png'
-import article4 from '../../public/images/articles/create modal component in react using react portals.png'
-import article5 from '../../public/images/articles/What is higher order component in React.jpg'
-import article6 from '../../public/images/articles/smooth scrolling in reactjs.png'
+import Utah from '../../public/images/articles/Life in Utah.jpg'
+import Ats from '../../public/images/articles/ATS system.png'
+import foodDrive from '../../public/images/articles/food drive.png'
+import paddleBoard from '../../public/images/articles/paddle Board.png'
+
 import { useRef } from 'react'
+import TransitionEffect from '@/components/TransitionEffect'
 const FramerImage = motion(Image)
 
 const MovingImg = ({ title, img, link }) => {
@@ -47,7 +47,7 @@ const MovingImg = ({ title, img, link }) => {
         ref={imgRef}
         src={img}
         alt={title}
-        className="z-10 w-96 h-auto hidden absolute rounded-lg"
+        className="z-10 w-96 h-auto hidden absolute rounded-lg md:!hidden"
       ></FramerImage>
     </Link>
   )
@@ -59,11 +59,11 @@ const Article = ({ img, title, date, link }) => {
       initial={{ y: 200 }}
       whileInView={{ y: 0, transition: { duration: 0.5, ease: 'easeInOut' } }}
       viewport={{ once: true }}
-      className="relative w-full p-4 py-6 my-4 rounded-xl flex items-center justify-between bg-light text-dark first:mt-0 border border-solid border-dark border-r-4 border-b-4 dark:border-light dark:bg-dark dark:text-light"
+      className="relative w-full p-4 py-6 my-4 rounded-xl flex items-center justify-between bg-light text-dark first:mt-0 border border-solid border-dark border-r-4 border-b-4 dark:border-light dark:bg-dark dark:text-light sm:flex-col md:pb-2 sm:self-start"
     >
       <MovingImg title={title} img={img} link={link} />
 
-      <span className="text-primary font-bold pl-4 dark:text-primaryDark">
+      <span className="text-primary font-bold pl-4 dark:text-primaryDark sm:self-start sm:pl-0 xs:text-sm">
         {date}
       </span>
     </motion.li>
@@ -82,7 +82,7 @@ const FearuredArticle = ({ img, title, time, summary, link }) => {
         <FramerImage
           src={img}
           alt={title}
-          className="w-full h-auto"
+          className="w-full h-[300px]"
           whileHover={{ scale: 1.05 }}
           transitions={{ duration: 0.2 }}
           priority
@@ -90,7 +90,7 @@ const FearuredArticle = ({ img, title, time, summary, link }) => {
         />
       </Link>
       <a href={link} target="_blank">
-        <h2 className="capitalize text-2xl font-bold my-2 mt-4 hover:underline">
+        <h2 className="capitalize text-2xl font-bold my-2 mt-4 hover:underline xs:text-lg">
           {title}
         </h2>
       </a>
@@ -112,24 +112,28 @@ const articles = () => {
           content="Computer science student graduation date of Decemebr 2024, interested in software engineering internships and Devops Engineering "
         />
       </Head>
-      <main className="w-full mb-16 flex flex-col items-centerpt-16 justify-center overflow-hidden dark:text-light">
+      <TransitionEffect />
+      <main className="w-full mb-16 flex flex-col items-centerpt-16 justify-center overflow-hidden dark:text-light px-10">
         <Layout className="pt-16">
-          <AnimatedText text="Documenting My Journey" className="mb-16" />
-          <ul className="grid grid-cols-2 gap-16">
+          <AnimatedText
+            text="Documenting My Journey"
+            className="mb-16 lg:!text-6xl md:!text-5xl sm:!text-4xl xs:!text-xl"
+          />
+          <ul className="grid grid-cols-2 gap-16 lg:gap-8 md:grid-cols-1 md:gap-y-16">
             <FearuredArticle
-              title="Life in Utah"
-              summary="Spent my summer 2023 in salt Lake City, working as a Full stack software engineeer at Pluralsight"
+              title="Summer 2023 in Utah"
+              summary="Spent my summer 2023 in salt Lake City, working as a Full stack software engineeer at Pluralsight."
               time="3 min read"
               link="/"
-              img={article1}
+              img={Utah}
             />
 
             <FearuredArticle
-              title="Life in Utah"
-              summary="Spent my summer 2023 in salt Lake City, working as a Full stack software engineeer at Pluralsight"
+              title="Key to Cracking Resume ATS"
+              summary="How I applied to over 50 software Engineering Intern Positions and received over 15 Interviews, and landed 5 offers."
               time="3 min read"
               link="/"
-              img={article2}
+              img={Ats}
             />
           </ul>
           <h2 className=" font-bold text-4xl w-full text-center my-16 mt-32 ">
@@ -137,28 +141,35 @@ const articles = () => {
           </h2>
           <ul>
             <Article
-              title="Giving back to the community"
-              img={article3}
+              title="Giving back to the Homeless community in Utah."
+              img={foodDrive}
               date="June 22, 2023"
               link="/"
             />
 
             <Article
-              title="Giving back to the community"
-              img={article4}
+              title="Preparing for Software Engineering Interviews."
+              img={Utah}
               date="June 22, 2023"
               link="/"
             />
             <Article
-              title="Giving back to the community"
-              img={article5}
+              title="Learning to Swim in 1 week."
+              img={Utah}
               date="June 22, 2023"
               link="/"
             />
 
             <Article
-              title="Giving back to the community"
-              img={article6}
+              title="Almost Drowned Paddle Boarding."
+              img={paddleBoard}
+              date="June 22, 2023"
+              link="/"
+            />
+
+            <Article
+              title="How I almost Drowned Paddle Boarding."
+              img={Utah}
               date="June 22, 2023"
               link="/"
             />
